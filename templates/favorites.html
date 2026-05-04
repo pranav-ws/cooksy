@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %} My Favorites {% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <h2 class="mb-4">My Saved Recipes</h2>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for recipe in recipes %}
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="{{ recipe.image_url }}" class="card-img-top" alt="{{ recipe.title }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ recipe.recipe_title }}</h5>
+                            <a href="https://spoonacular.com/recipes/{{ recipe.recipe_title | replace(' ', '-') }}-{{ recipe.recipe_id }}" target="_blank" class="btn btn-primary w-100">View Full Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12 text-center">
+                    <p class="lead">You haven't saved any recipes yet!</p>
+                    <a href="/" class="btn btn-primary">Go find some</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container mt-5 pt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="text-muted fst-italic lead">
+                    "A recipe has no soul. You, as the cook, must bring soul to the recipe" <br>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

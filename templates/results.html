@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %} Search Results {% endblock %}
+
+{% block main %}
+    <div class="container mt-4">
+        <h2 class="mb-4">You can make these right now:</h2>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for recipe in recipes %}
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <!-- Spoonacular provides standard image URLs -->
+                        <img src="{{ recipe.image }}" class="card-img-top" alt="{{ recipe.title }}">
+                        
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ recipe.title }}</h5>
+                            <p class="card-text text-muted">Uses {{ recipe.usedIngredientCount }} ingredients you have!</p>
+                            
+                            <!-- The save button form -->
+                            <form action="/save" method="post" class="mt-auto">
+                                <input type="hidden" name="recipe_id" value="{{ recipe.id }}">
+                                <input type="hidden" name="title" value="{{ recipe.title }}">
+                                <input type="hidden" name="image_url" value="{{ recipe.image }}">
+                                <button type="submit" class="btn btn-outline-success w-100">Add to Favorites</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12 text-center">
+                    <h3>No recipes found for those ingredients. Try something else!</h3>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

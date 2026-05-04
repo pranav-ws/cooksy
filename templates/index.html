@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %} Rescue My Fridge {% endblock %}
+
+{% block main %}
+    <div class="hero-section text-center">
+        <h1 class="mb-4 fw-bold hero-text text-white">What's in your fridge?</h1>
+        <p class="lead mb-5 hero-text text-white">Enter a few ingredients, and we'll tell you what you can make right now.</p>
+        
+        <form action="/" method="post" class="w-75 mx-auto">
+            <div class="input-group input-group-lg shadow-lg">
+                <input autocomplete="off" autofocus class="form-control border-0" name="ingredients" placeholder="e.g. eggs, tomato, cheese" type="text" required>
+                <button class="btn btn-primary fw-bold px-4" type="submit">Find Recipes</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-5 pt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <p class="text-muted fst-italic lead">
+                    "People who love to eat are always the best people." <br>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

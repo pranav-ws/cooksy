@@ -1,0 +1,71 @@
+/* transition between light and dark mode smooth */
+html,
+body,
+.navbar,
+.card {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* styling for the search input */
+.form-control-lg {
+  border-radius: 30px 0 0 30px;
+  padding-left: 25px;
+}
+
+/* styling for the search button */
+.btn-primary {
+  border-radius: 0 30px 30px 0;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* Recipe Card Hover Effects */
+.card {
+  border-radius: 15px;
+  overflow: hidden; /* Keeps the image inside the rounded corners */
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* When the user hovers over a recipe card, make it float up slightly */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure recipe images look good and don't stretch weirdly */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Flash message styling */
+.alert {
+  border-radius: 15px;
+}
+
+/* Homepage Hero Background */
+.hero-section {
+  /* The gradient makes the image darker so text is readable */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 6rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the text over the image is always white, even in light mode */
+.hero-text {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}

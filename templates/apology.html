@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %} Error {% endblock %}
+
+{% block main %}
+    <div style="text-align: center; margin-top: 50px;">
+        <h1 style="color: red;">Error! {{ top }}</h1>
+        <h3>{{ bottom }}</h3>
+        <br>
+        <a href="/" class="btn btn-primary">Go Back</a>
+    </div>
+{% endblock %}
