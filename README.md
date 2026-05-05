@@ -1,6 +1,7 @@
 # Cooksy
 
 #### Video Demo: https://youtu.be/CFr-BMYfNPI
+#### Cooksy: https://cooksy-c0c0.onrender.com
 
 #### Description:
 The idea for Cooksy was born out of a universal, everyday frustration: staring into a refrigerator full of mismatched ingredients and having no idea what to cook. Traditional recipe websites require users to figure out what they want to eat first, often leading to a frustrating realization that they are missing key components. Cooksy flips this paradigm entirely. It operates as a "reverse recipe engine," allowing users to input the ingredients they already have on hand and instantly generating a curated list of meals they can prepare right now. Not only does this solve the daily dilemma of "what's for dinner," but it also actively encourages users to reduce their food waste and save money.
