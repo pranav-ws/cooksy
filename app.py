@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
-from helpers import login_required, apology # Re-use these from Finance!
+from helpers import login_required, apology
 
 app = Flask(__name__)
 
