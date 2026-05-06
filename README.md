@@ -1,6 +1,5 @@
 # Cooksy
 
-#### Video Demo: https://youtu.be/CFr-BMYfNPI
 #### Cooksy: https://cooksy-c0c0.onrender.com
 
 #### Description:
